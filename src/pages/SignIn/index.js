@@ -63,6 +63,7 @@ const SignIn = () => {
       navigate('/home');
 
     } catch (error) {
+      console.log("Erro aqui");
       setLoading(false);
       const message = error.response.data
       return setError(message[0].toUpperCase() + message.substr(1, message.length))
